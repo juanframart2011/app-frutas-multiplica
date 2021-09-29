@@ -1,8 +1,8 @@
 {
   "name": "test-app-multiplica",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Juan Rogelio Franco Martinez",
+  "homepage": "https://juanrofranco.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,0 +1,67 @@
+ion-title{
+    margin-top: 0.5em;
+}
+
+ion-avatar{
+    width: 130px;
+    height: 130px;
+    border: 1px solid #E5E5E5;
+    padding: 4px;
+    background: white;
+}
+
+ion-button{
+    border-radius: 2em;
+}
+
+ion-toolbar{
+    border-bottom: inherit;
+}
+
+.card-nba{
+    background: linear-gradient(180deg, var(--ion-color-primary) 0%, var(--ion-color-primary) 100%);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: -20px;
+    height: 13em;
+    padding: 20px;
+    padding-top: 0px;
+    width: 100%;
+
+    .text-white{
+        color: white;
+    }
+}
+
+.description {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+    padding: 5px;
+
+    .description-icono{
+
+        margin-top: 1em;
+    }
+
+    .nickname{
+
+        color: var(--ion-color-primary);
+        font-weight: bold;
+    }
+
+    .nickname-txt{
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+
+.line-left{
+    border-right: 1px solid #E5E5E5;
+}
+.line-down{
+    border-bottom: 1px solid #E5E5E5;
+}
+.textRed{
+    color: #c8102e;
+    font-weight: bold;
+}

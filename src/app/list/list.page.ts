@@ -41,7 +41,7 @@ export class ListPage implements OnInit {
 				}
 			},
 			(err) =>{
-				
+				console.warn(err);
 				this.dismiss();
 				this.alertMessage( 'Error Desconocido', '', 'Error Desconocido' );
 			},

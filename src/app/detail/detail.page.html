@@ -1,11 +1,105 @@
 <ion-header>
 	<ion-toolbar>
-		<ion-buttons slot="start">
-			<ion-back-button defaultHref="/" color="white"></ion-back-button>
-		</ion-buttons>
-		<ion-title>detail</ion-title>
+
+		<ion-grid>
+			<ion-row>
+				<ion-col size="4">
+					<ion-buttons>
+						<ion-back-button defaultHref="/" color="white"></ion-back-button>
+					</ion-buttons>
+				</ion-col>
+				<ion-col size="4">
+					<ion-title class="ion-text-center">NBA</ion-title>
+				</ion-col>
+				<ion-col size="4">
+					<h6>More Info</h6>
+				</ion-col>
+			</ion-row>
+		</ion-grid>		
 	</ion-toolbar>
 </ion-header>
 
 <ion-content>
+	<ion-grid *ngIf="isLoadingTeam">
+		<ion-row>
+			<ion-col size="12" class="top-container">
+				<ion-row>
+					<ion-col size="6" class="center-image">
+						<ion-avatar>
+							<img [src]="team.logo | logo ">
+						</ion-avatar>	
+					</ion-col>
+					<ion-col size="6">
+						<ion-row>
+							<ion-col size="12" class="color-white  titulo-peli">{{ team.fullName }}</ion-col>
+							<ion-col size="12" class="color-white txt-small">Conferencia</ion-col>
+							<ion-col size="12" class="color-white vote">
+								<ion-badge color="{{ null | conferenceColor }}">{{ team.leagues.standard.confName }}</ion-badge>
+							</ion-col>
+							<ion-col size="12" class="color-white txt-small">
+								All Star: <strong>{{ team.allStar }}</strong>
+							</ion-col>
+						</ion-row>
+					</ion-col>
+				</ion-row>
+			</ion-col>
+		</ion-row>
+		
+		<ion-row>
+			<ion-col size="12">
+				<div class="white_box margen-abajo">
+					<ion-row>
+						<ion-col size="9">
+							<ion-row>
+								<ion-col size="12" class="verdeTxt">Nickname</ion-col>
+								<ion-col size="12" class="cuadro-txt color-gray">{{ team.nickname }}</ion-col>
+							</ion-row>
+						</ion-col>
+						<ion-col size="3" class="center-div">
+							<div class="div-icono">
+								<img src="/assets/nba-logo.png">
+							</div>
+						</ion-col>
+					</ion-row>
+				</div>
+			</ion-col>
+		</ion-row>
+		
+		<ion-row class="top-cuadrado">
+			<ion-col size="5" class="linea-izq linea-abajo">
+				<ion-row>
+					<ion-col size="12" class="verdeTxt">Short name</ion-col>
+					<ion-col size="12" class="txt-small color-gray espacio-abajo"> {{ team.shortName }} </ion-col>
+				</ion-row>
+			</ion-col>
+			<ion-col size="7" class="linea-abajo">
+				<ion-row>
+					<ion-col size="12" class="verdeTxt">Ciudad</ion-col>
+					<ion-col size="12" class="txt-small color-gray espacio-abajo">{{ team.city }}</ion-col>
+				</ion-row>
+			</ion-col>
+			<ion-col size="5"  class="linea-izq">
+				<ion-row>
+					<ion-col size="12" class="verdeTxt">nba Franchise</ion-col>
+					<ion-col size="12" class="txt-small color-gray">{{ team.nbaFranchise }} </ion-col>
+				</ion-row>
+			</ion-col>
+			<ion-col size="7">
+				<ion-row>
+					<ion-col size="12" class="verdeTxt">Ligas</ion-col>
+					<ion-col size="12" class="txt-small">
+						<ion-label class="txt-small">{{ team.leagues.length }}</ion-label>
+					</ion-col>
+				</ion-row>
+			</ion-col>
+		</ion-row>
+		<ion-row class="top-button">
+			<ion-col size="12" class="centrar-margin">
+				<ion-button class="verde-degradado boton-dimension">
+					<ion-icon slot="start" name="globe-outline"></ion-icon>
+					Ver Website Oficial
+				</ion-button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
 </ion-content>

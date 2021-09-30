@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { DetailPageRoutingModule } from './detail-routing.module';
-
+import { PipeModule } from 'src/app/pipe/pipe.module';
 import { DetailPage } from './detail.page';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { DetailPage } from './detail.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    PipeModule,
     DetailPageRoutingModule
   ],
   declarations: [DetailPage]

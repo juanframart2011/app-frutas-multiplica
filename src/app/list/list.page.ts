@@ -3,6 +3,7 @@ import { Team } from '../interface/team';
 import { TeamService } from '../service/team.service';
 import { AlertController } from '@ionic/angular';
 import { LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -17,6 +18,7 @@ export class ListPage implements OnInit {
 	constructor( 
 		public alertController: AlertController,
 		public loadingController: LoadingController,
+		private router:Router,
 		private teamService:TeamService
 	){
 		this._showLoading();
@@ -81,5 +83,10 @@ export class ListPage implements OnInit {
 				}
 			});
 		});
-	} 
+	}
+
+	detail( teamId:string ){
+
+		this.router.navigate(['/detail/', teamId]);
+	}
 }

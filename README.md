@@ -1,3 +1,3 @@
-# app-frutas-multiplica
-App de consumo de frutas multilica
-API que se consume: https://www.fruityvice.com/#3
+# app-nba-multiplica
+App de consumo de equipos de la NBA
+API que se consume: https://rapidapi.com/api-sports/api/api-nba/

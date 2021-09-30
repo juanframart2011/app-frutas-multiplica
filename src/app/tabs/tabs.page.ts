@@ -10,7 +10,8 @@ export class TabsPage {
 
   constructor( private router: Router ) {}
 
-  home(){
-    this.router.navigate(['/tabs/home']);
+  goList(){
+    
+    this.router.navigate(['/tabs/list']);
   }
 }
